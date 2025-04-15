@@ -5,10 +5,14 @@ import SessionButton from "../ui/SessionButton";
 const Navbar = () => {
  return (
   <header className=" w-full">
-   <nav className="fixed p-5 px-10 top-0 left-0 z-10 w-full flex justify-between items-center bg-green-700 text-white">
+   <nav className="fixed p-5 px-10 top-0 left-0 z-10 w-full flex justify-between items-center bg-[#337367] text-white">
     <ul className="flex justify-center w-[200px]">
      <Link href="/">
-      <h1 className="text-3xl font-bold italic">Sellaris</h1>
+      <h1
+       className="text-3xl font-bold italic"
+       style={{fontFamily: "Raleway"}}>
+       Sellaris
+      </h1>
      </Link>
     </ul>
     <ul className="flex gap-5 items-center w-full justify-center">

@@ -37,7 +37,7 @@ export async function register(data: {
  updated_at?: Date;
 }) {
  const q = query(
-  collection(firestore, "masters"),
+  collection(firestore, "users"),
   where("email", "==", data.email)
  );
  const snapshot = await getDocs(q);
@@ -52,12 +52,12 @@ export async function register(data: {
    message: "Email already exists",
   };
  } else {
-  data.role = "web masters";
+  data.role = "admin";
   data.password = await bcrypt.hash(data.password, 10);
   data.created_at = new Date();
   data.updated_at = new Date();
   try {
-   await addDoc(collection(firestore, "masters"), data);
+   await addDoc(collection(firestore, "users"), data);
    return {
     status: true,
     statusCode: 200,
@@ -71,7 +71,7 @@ export async function register(data: {
 
 export async function login(data: {email: string}) {
  const q = query(
-  collection(firestore, "masters"),
+  collection(firestore, "users"),
   where("email", "==", data.email)
  );
  const snapshot = await getDocs(q);

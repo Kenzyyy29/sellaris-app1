@@ -39,18 +39,22 @@ export default function RegistForm({
  };
 
  return (
-  <div>
+  <div className="bg-white/50 backdrop-blur-sm max-w-sm w-full p-5 flex flex-col gap-4 justify-center items-center rounded-[8px] shadow-xl shadow-gray-300">
+   <h1
+    className="text-2xl font-bold italic"
+    style={{fontFamily: "Raleway"}}>
+    Sellaris Register
+   </h1>
    <form
     onSubmit={handleSubmit}
-    className="bg-white shadow-xl p-4 max-w-[320px] w-full flex flex-col items-center gap-2 rounded-[8px]">
-    <h1 className="text-2xl font-bold">Sellaris Register</h1>
+    className="w-full flex flex-col items-center justify-center gap-4">
     <div className="flex flex-col gap-2 w-full">
      <input
       type="text"
       name="fullname"
       id="fullname"
       placeholder="Fullname"
-      className="w-full border border-gray-400 text-gray-400 focus:outline-none p-2 rounded-[8px]"
+      className="w-full border border-gray-300 text-gray-400 focus:text-black focus:outline-none p-2 rounded-[8px]"
      />
     </div>
     <div className="flex flex-col gap-2 w-full">
@@ -59,7 +63,7 @@ export default function RegistForm({
       name="email"
       id="email"
       placeholder="Email"
-      className="w-full border border-gray-400 text-gray-400 focus:outline-none p-2 rounded-[8px]"
+      className="w-full border border-gray-300 text-gray-400 focus:text-black focus:outline-none p-2 rounded-[8px]"
      />
     </div>
     <div className="flex flex-col gap-2 w-full">
@@ -68,7 +72,7 @@ export default function RegistForm({
       name="phone"
       id="phone"
       placeholder="Phone"
-      className="w-full border border-gray-400 text-gray-400 focus:outline-none p-2 rounded-[8px]"
+      className="w-full border border-gray-300 text-gray-400 focus:text-black focus:outline-none p-2 rounded-[8px]"
      />
     </div>
     <div className="flex flex-col gap-2 w-full">
@@ -77,17 +81,17 @@ export default function RegistForm({
       name="password"
       id="password"
       placeholder="Password"
-      className="w-full border border-gray-400 text-gray-400 focus:outline-none p-2 rounded-[8px]"
+      className="w-full border border-gray-300 text-gray-400 focus:text-black focus:outline-none p-2 rounded-[8px]"
      />
     </div>
     <button
      type="submit"
-     className="w-full bg-slate-800 p-2 rounded text-gray-400 cursor-pointer hover:bg-slate-700">
+     className="w-full bg-[#337367] font-semibold p-2 rounded text-white cursor-pointer hover:bg-[#50857a]">
      {isLoading ? "Loading..." : "Register"}
     </button>
    </form>
    <div className="flex gap-2 text-[14px]">
-    <h1 className="text-white">Already have an account?</h1>
+    <h1 className="text-gray-400">Already have an account?</h1>
     <Link href="/login">
      <h1 className="text-blue-300 hover:underline">Login</h1>
     </Link>
