@@ -25,7 +25,7 @@ const SessionButton = () => {
        <ul className="rounded-[8px] w-full">
         <li className="px-4 py-2 hover:bg-gray-200">Item A</li>
         <button className="px-4 py-2 hover:bg-gray-200 w-full cursor-pointer text-start">
-         <Link href="/dashboard">Dashboard</Link>
+         <Link href="/master">Master</Link>
         </button>
         <button
          onClick={() => signOut()}

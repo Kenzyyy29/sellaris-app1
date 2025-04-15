@@ -11,7 +11,7 @@ const lato = Lato({
     style: ["normal", "italic"],
     variable: "--font-lato",
 })
-const disableNavbar = ["login", "register"];
+const disableNavbar = ["login", "register", "master"];
 
 export default function RootLayout({
  children,

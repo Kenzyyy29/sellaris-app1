@@ -6,7 +6,7 @@ import {
  NextResponse,
 } from "next/server";
 
-const onlyWebMasters = "/masters";
+const onlyWebMasters = "/master";
 const onlyAdmin = "/dashboard";
 const authPage = ["/login", "/register"];
 
