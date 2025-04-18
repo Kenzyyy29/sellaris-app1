@@ -2,7 +2,7 @@
 
 import {useState, useEffect} from "react";
 
-interface UpdateClientModalProps {
+interface UpdateUserModalProps {
  isOpen: boolean;
  onClose: () => void;
  onSave: (data: {role: string}) => void;
@@ -14,12 +14,12 @@ interface UpdateClientModalProps {
  };
 }
 
-const UpdateClientModal = ({
+const UpdateUserModal = ({
  isOpen,
  onClose,
  onSave,
  userData,
-}: UpdateClientModalProps) => {
+}: UpdateUserModalProps) => {
  const [formData, setFormData] = useState(userData);
 
  useEffect(() => {
@@ -71,6 +71,7 @@ const UpdateClientModal = ({
       value={formData.role}
       onChange={handleChange}
       className="w-full border border-black text-black focus:outline-none rounded px-3 py-2">
+      <option value="member">member</option>
       <option value="admin">admin</option>
      </select>
     </form>
@@ -92,4 +93,4 @@ const UpdateClientModal = ({
  );
 };
 
-export default UpdateClientModal;
+export default UpdateUserModal;

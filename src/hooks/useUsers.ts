@@ -16,7 +16,7 @@ interface User {
     role: string;
 }
 
-export const useClient = () => {
+export const useUsers = () => {
     const [users, setUsers] = useState<User[]>([]);
     const [loading, setLoading] = useState(true);
 

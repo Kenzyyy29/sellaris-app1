@@ -1,16 +1,16 @@
-interface DeleteClientModalProps {
+interface DeleteConfirmationModalProps {
  isOpen: boolean;
  onClose: () => void;
  onConfirm: () => void;
  userName: string;
 }
 
-const DeleteClientModal = ({
+const DeleteUserModal = ({
  isOpen,
  onClose,
  onConfirm,
  userName,
-}: DeleteClientModalProps) => {
+}: DeleteConfirmationModalProps) => {
  if (!isOpen) return null;
  return (
   <div className="fixed flex items-center justify-center w-full h-full top-0 left-0 bg-black/30">
@@ -38,4 +38,4 @@ const DeleteClientModal = ({
  );
 };
 
-export default DeleteClientModal;
+export default DeleteUserModal;
